@@ -55,7 +55,7 @@ class Gol {
       for (int j = 0; j < rows; j++) {
         if (board[i][j] == 1) fill(0);
         else fill(255);
-        stroke(50);
+        stroke(225);
         rect(i * cellSize, j * cellSize, cellSize, cellSize);
       }
     }
