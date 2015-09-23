@@ -1,6 +1,6 @@
 class Gol {
 
-  int cellSize = 8;
+  int cellSize = 10;
   int cols, rows;
 
   int[][] board;
