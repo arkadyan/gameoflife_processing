@@ -6,6 +6,9 @@
 long GENERATION_LIFETIME = 1000;
 
 long generationAge;
+int generationCount;
+boolean newGeneration;
+
 Gol gol;
 
 void setup() {
@@ -19,8 +22,15 @@ void draw() {
 
   if (millis() - generationAge > GENERATION_LIFETIME) {
     generationAge = millis();
+    newGeneration = true;
     gol.generate();
   }
 
   gol.draw();
+
+  if (newGeneration && generationCount < 61) {
+    generationCount++;
+    saveFrame("frame-" + generationCount + ".png");
+    newGeneration = false;
+  }
 }
