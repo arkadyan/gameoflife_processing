@@ -9,7 +9,7 @@ long generationAge;
 Gol gol;
 
 void setup() {
-  size(610, 180);
+  size(620, 190);
   generationAge = millis();
   gol = new Gol();
 }
